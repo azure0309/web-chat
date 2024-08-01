@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Username</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form from submitting the default way
+            const username = document.getElementById('username').value;
+            if (username) {
+                // Redirect to chat page with username as query parameter
+                window.location.href = `chat.html`;
+                localStorage.setItem('username', username); // Store in local storage
+
+            } else {
+                alert('Please enter a username');
+            }
+        }
+    </script>
+</head>
+<body class="index-container">
+<div class="index-form">
+    <h1>Enter Your Username</h1>
+    <form onsubmit="handleSubmit(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Enter</button>
+    </form>
+</div>
+</body>
+</html>

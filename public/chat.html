@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat Application</title>
+        <link rel="stylesheet" href="css/chat.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="conversations-list" id="conversationsList">
+                <!-- Conversations will be populated here -->
+                <div class="conversation-item new-conversation" id="newConversationButton">+ New Conversation</div>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <!-- Username and quit button will appear here -->
+                    <div style="float: right; width: 200px">
+                        <h4 id="chatHeaderTitle"></h4>
+                        <button class="quit-button" id="quitButton">Quit</button>
+                    </div>
+
+
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
